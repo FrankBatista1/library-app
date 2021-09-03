@@ -35,7 +35,7 @@ router.post('/user', async (req, res) => {
 
 
 //Updating One -- [PUT]
-router.put('/:id', (req, res) => {
+router.put('/user/:id', (req, res) => {
   const toUpdate = User.findByIdAndUpdate(req.params.id, req.body, {new : true})// parameters: id in the url... what does the other parameters means
    toUpdate.then(val => {
      return res.json(val)
@@ -43,7 +43,7 @@ router.put('/:id', (req, res) => {
 })
 
 //Deleting One -- [DELETE]
-router.delete('/:id', (req,res) => {
+router.delete('/user/:id', (req,res) => {
   User.findByIdAndDelete(req.params.id)
   .then(() => {
     return res.json({message:'User deleted succesfully'})
