@@ -5,7 +5,7 @@ const Rental = require('../models/Rental')
 // [GET]
 router.get('/rentals', async (req, res) => {
     try{
-      const rentals = await Rental.find()
+      const rentals = await Rental.find().populate('user').populate('book')
         res.json(rentals)
     } catch (err) {
         res.status(500).json({messege: err.messege})
@@ -14,7 +14,7 @@ router.get('/rentals', async (req, res) => {
 // [GET1]
 router.get('/rentals/:id', (req, res) => {
     const rentals = Rental.findbyId(req.params.id)
-      user.then(val => res.json(val))
+      rentals.then(val => res.json(val))
   
 })
 // [POST]
