@@ -1,12 +1,24 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Iteration 1 - Users [Cannot Refernce Schema.Types.ObjectId] Create the CRUD for Users - by default Id - name - lastname",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankBatista1/library-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FrankBatista1/library-app/issues"
+  },
+  "homepage": "https://github.com/FrankBatista1/library-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4"
+  }
 }
